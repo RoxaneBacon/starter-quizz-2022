@@ -1,7 +1,26 @@
 <div class="card" *ngIf="quiz">
-    <h2>
-        <i class="fab fa-leanpub"></i>
-        {{quiz.name}}
-    </h2>
-    <button class="button-card" (click)="selectQuiz()">Select</button>
+  <h2>
+    <div *ngIf="quiz.name === 'Les Acteurs'">
+      <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+        <path
+          d="m160-800 80 160h120l-80-160h80l80 160h120l-80-160h80l80 160h120l-80-160h120q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800Zm0 240v320h640v-320H160Zm0 0v320-320Z" />
+      </svg>
+    </div>
+    <div *ngIf="quiz.name === 'Les Sports'">
+      <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+        <path
+          d="m536-84-56-56 142-142-340-340-142 142-56-56 56-58-56-56 84-84-56-58 56-56 58 56 84-84 56 56 58-56 56 56-142 142 340 340 142-142 56 56-56 58 56 56-84 84 56 58-56 56-58-56-84 84-56-56-58 56Z" />
+      </svg>
+    </div>
+    {{quiz.name}}
+  </h2>
+  <span>Theme : {{quiz.theme}}</span>
+  <div>Nombre de question(s): {{quiz.questions.length}}</div>
+  <div>Date de création: {{quiz.creationDate | date}}</div>
+  <button class="button-card" (click)="selectQuiz()">Select</button>
+  <button class="button-card" (click)="deleteQuiz()">Delete</button>
 </div>
+
+
+
+<!-- Logo livre : <i class="fab fa-leanpub"></i> -->

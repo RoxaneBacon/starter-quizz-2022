@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { QuizListComponent } from './quizzes/quiz-list/quiz-list.component';
@@ -14,13 +15,10 @@ import { QuizFormComponent } from './quizzes/quiz-form/quiz-form.component';
     QuizListComponent,
     QuizComponent,
     HeaderComponent,
-    QuizFormComponent
+    QuizFormComponent,
   ],
-  imports: [
-    BrowserModule,
-    ReactiveFormsModule
-  ],
+  imports: [BrowserModule, ReactiveFormsModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -6,7 +6,16 @@
       <input class="input-custom" type="text" id="name" [formControlName]="'name'">
     </label>
     <br>
-    <button type="submit" class="button-card" (click)="addQuiz()">Create</button>
+
+    <label for="theme">
+      Theme <br>
+      <select class="input-custom" type="select" id="theme" [formControlName]="'theme'">
+        <option *ngFor="let theme of THEME_LIST" [value]="theme">{{theme}}</option>
+      </select>
+    </label>
+    <br>
+    <button type="submit" class="button-card" (click)="addQuiz()">Create</button><br>
+    <br>
   </form>
 </div>
 <!-- Uncomment below to see your form structure and how it changes-->

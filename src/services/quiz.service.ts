@@ -47,9 +47,10 @@ export class QuizService {
   }
 
   getQuizzes() {
-    this.http.get<Quiz[]>(this.url).subscribe((quizzes) => {
+    /* this.http.get<Quiz[]>(this.url).subscribe((quizzes) => {
       this.quizzes = quizzes;
       this.quizzes$.next(this.quizzes);
-    });
+    }); */
+    // get data from json file 'quiz-list-with-id.mock.json'
   }
 }
